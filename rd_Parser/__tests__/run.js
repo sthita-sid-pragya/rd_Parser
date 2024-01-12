@@ -13,6 +13,11 @@ const tests = [
     require('./statement-list-test.js'),
     require('./block-test.js'),
     require('./empty-statement-test.js'),
+    require('./math-test.js'),
+    require('./assignment-test.js'),
+    require('./variable-test.js'),
+    require('./if-test.js'),
+    
 ];
 
 
@@ -25,9 +30,16 @@ function exec() {
 
     const program = `
 
-    42;
+    //    let x = 42;
 
-    //10;
+    //    if(x){
+    //     x = 0;
+    //    } else {
+    //     x += 1;
+    //    }
+
+    if (x) if (y) {} else {};
+
 `;
 const ast = parser.parse(program);
 
